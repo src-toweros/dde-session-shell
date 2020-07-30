@@ -14,7 +14,6 @@ BuildRequires:  cmake
 BuildRequires:  dde-daemon
 BuildRequires:  dtkcore >= 5.1
 BuildRequires:  gsettings-qt
-#BuildRequires:  liblightdm-qt5-3-devel
 BuildRequires:  startdde
 BuildRequires:  qt5-linguist
 BuildRequires:  dtkwidget-devel >= 5.1
@@ -62,5 +61,5 @@ make
 %{_datadir}/dbus-1/services/com.deepin.dde.shutdownFront.service
 
 %changelog
-* Thu Jun 11 2020 uoser <uoser@uniontech.com> - 5.0.0.8
-- Update to 5.0.0.8
+* Thu Jul 30 2020 openEuler Buildteam <buildteam@openeuler.org> - 5.0.0.8-1
+- Package init
