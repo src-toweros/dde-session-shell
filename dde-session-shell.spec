@@ -4,11 +4,11 @@
 
 Name:           dde-session-shell
 Version:        5.0.0.8
-Release:        1
+Release:        2
 Summary:        deepin-session-shell - Deepin desktop-environment - session-shell module
 License:        GPLv3+
 URL:            http://shuttle.corp.deepin.com/cache/repos/eagle/release-candidate/RERFNS4wLjAuNzYxMA/pool/main/d/dde-session-shell/
-Source0:        %{name}_%{version}.orig.tar.xz
+Source0:        http://shuttle.corp.deepin.com/cache/repos/eagle/release-candidate/RERFNS4wLjAuNzYxMA/pool/main/d/%{name}/%{name}_%{version}.orig.tar.xz
 
 BuildRequires:  cmake
 BuildRequires:  dde-daemon
@@ -61,5 +61,8 @@ make
 %{_datadir}/dbus-1/services/com.deepin.dde.shutdownFront.service
 
 %changelog
+* Thu Sep 3 2020 weidong <weidong@uniontech.com> - 5.0.0.8-2
+- fix source url in spec
+
 * Thu Jul 30 2020 openEuler Buildteam <buildteam@openeuler.org> - 5.0.0.8-1
 - Package init
