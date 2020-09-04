@@ -61,7 +61,6 @@ make
 %{_datadir}/dbus-1/services/com.deepin.dde.shutdownFront.service
 
 %changelog
-<<<<<<< HEAD
 * Fri Sep 04 2020 weidong <weidong@uniontech.com> - 5.0.0.8-3
 - fix source url in spec
 
