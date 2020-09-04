@@ -4,7 +4,7 @@
 
 Name:           dde-session-shell
 Version:        5.0.0.8
-Release:        1
+Release:        2
 Summary:        deepin-session-shell - Deepin desktop-environment - session-shell module
 License:        GPLv3+
 URL:            http://shuttle.corp.deepin.com/cache/repos/eagle/release-candidate/RERFNS4wLjAuNzYxMA/pool/main/d/dde-session-shell/
@@ -12,11 +12,11 @@ Source0:        %{name}_%{version}.orig.tar.xz
 
 BuildRequires:  cmake
 BuildRequires:  dde-daemon
-BuildRequires:  dtkcore >= 5.1
+BuildRequires:  dtkcore-devel
 BuildRequires:  gsettings-qt
 BuildRequires:  startdde
 BuildRequires:  qt5-linguist
-BuildRequires:  dtkwidget-devel >= 5.1
+BuildRequires:  dtkwidget-devel
 BuildRequires:  qt5-qtx11extras-devel
 BuildRequires:  qt5-qtmultimedia-devel
 BuildRequires:  qt5-qtsvg-devel
@@ -61,5 +61,8 @@ make
 %{_datadir}/dbus-1/services/com.deepin.dde.shutdownFront.service
 
 %changelog
+* Fri Sep 04 2020 chenbo.pan <panchenbo@uniontech.com> - 5.0.0.8-2
+- fix compile error
+
 * Thu Jul 30 2020 openEuler Buildteam <buildteam@openeuler.org> - 5.0.0.8-1
 - Package init
