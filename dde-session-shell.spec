@@ -9,6 +9,7 @@ Summary:        deepin-session-shell - Deepin desktop-environment - session-shel
 License:        GPLv3+
 URL:            http://shuttle.corp.deepin.com/cache/repos/eagle/release-candidate/RERFNS4wLjAuNzYxMA/pool/main/d/dde-session-shell/
 Source0:        http://shuttle.corp.deepin.com/cache/repos/eagle/release-candidate/RERFNS4wLjAuNzYxMA/pool/main/d/%{name}/%{name}_%{version}.orig.tar.xz
+Patch0:         0001-fix-compile-error-for-openeuler.patch
 
 BuildRequires:  cmake
 BuildRequires:  dde-daemon
@@ -33,9 +34,7 @@ BuildRequires:  lightdm-qt5-devel lightdm-gtk-greeter
 deepin-session-shell - Deepin desktop-environment - session-shell module.
 
 %prep
-%setup -q -n %{name}-%{version}
-
-
+%autosetup -n %{name}-%{version} -p1
 
 %build
 export PATH=$PATH:%{_qt5_bindir}
@@ -61,6 +60,9 @@ make
 %{_datadir}/dbus-1/services/com.deepin.dde.shutdownFront.service
 
 %changelog
+* Wed Sep 09 2020 chenbo.pan <panchenbo@uniontech.com> - 5.0.0.8-4
+- fix compile error for openeuler 
+
 * Fri Sep 04 2020 weidong <weidong@uniontech.com> - 5.0.0.8-3
 - fix source url in spec
 
